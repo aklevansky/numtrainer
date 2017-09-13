@@ -8,6 +8,7 @@ const config = {
     path: path.join(__dirname, 'public'),
     filename: "script.js"
   },
+
   module: {
     rules: [{
       test: /\.js?$/,
