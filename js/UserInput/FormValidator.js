@@ -50,7 +50,9 @@ export default class FormValidator {
 
 
 		document.addEventListener('input', (e) => {
-			this._inputNumber(e);
+			if (e.target.classList.contains('js-numbers')) {
+				this._inputNumber(e);
+			}
 		});
 
 		document.addEventListener('change', (e) => {

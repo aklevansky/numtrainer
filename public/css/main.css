@@ -83,9 +83,8 @@ input[type="checkbox"] {
 }
 
 .js-invisible {
-/*	visibility: hidden;*/
 	opacity: 0;
-	transition: all 1.5s
+	transition: all 1.5s;
 }
 
 .js-error {
@@ -100,8 +99,7 @@ input[type="checkbox"] {
 /* Style range input*/
 
 input[type=range] {
-/*  width: 30%;
-*/  height: 2em;
+  height: 2em;
 }
 
 .js-controls {
@@ -166,8 +164,17 @@ section.display {
 .js-session p {
 	padding-top: 0.4em;
 	margin-top: 0.6em;
-	border-top: 1px solid rgb(166,162,159);;
+	border-top: 1px solid rgb(166,162,159);
 	clear: left;
+}
+
+.slide {
+	max-height: 1000px;    
+	overflow-y: hidden;        
+    -webkit-transition: all 0.8s linear;
+    -moz-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
+    transition: all 0.8s linear;
 }
 
 .wrapBtn {
@@ -176,8 +183,20 @@ section.display {
 	right: 1em;
 }
 
-.js-hidden {
+button.js-hidden {
 	display: none;
+}
+
+p.js-hidden {
+	padding: 0;
+	margin: 0;
+	border: none;
+	max-height: 0;
+	overflow-y: hidden;
+	-webkit-transition: all 0.8s linear;
+    -moz-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
+    transition: all 0.8s linear;         
 }
 
 .js-active {
@@ -202,12 +221,6 @@ section.display {
     content: "";
 }
 
-
-.js-numbers.js-hidden {
-	display: none;
-	-webkit-transition: all 1.5s ease 0s;
-    -moz-transition: all 1.5s ease 0s;
-    -ms-transition: all 1.5s ease 0s;
-    -o-transition: all 1.5s ease 0s;
-    transition: all 1.5s ease 0s;
+.js-displayError {
+	color: red;
 }

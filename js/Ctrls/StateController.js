@@ -54,13 +54,15 @@ export default class StateController {
 		this._switchPauseToPlay(active); // changes main button and active button
 	}
 
-	_stopped(active = -1) { // switch play button to pause button; unblock all buttons
+	_stopped(active) { // switch play button to pause button; unblock all buttons
 		this._ctrlBtnsUpToDate();
 
 		this._mainBtns.play.classList.remove('js-hidden');
 		this._mainBtns.pause.classList.add('js-hidden');
 
-		this._switchPauseToPlay(active); // changes main button + active button
+		if (active) {
+			this._switchPauseToPlay(active); // changes main button + active button
+		}
 		this._ctrlBtnsUnblock();
 
 	}

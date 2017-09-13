@@ -52,6 +52,11 @@ export default class ViewController {
 		this._display.appendChild(article);
 
 		this._sessions.push(article);
+
+		if ( wrapped ) {
+			this._wrapSession(position);
+		}
+
 		this._clearBtn.disabled = false;
 
 		return position;
