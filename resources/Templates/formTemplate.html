@@ -1,0 +1,86 @@
+<fieldset class='js-input-form'>
+	<div class="form-group row">
+		
+		<div class="col-md-6 radioGroup">
+			<div class="col-md-4">
+				<label>Digit Separator: </label>
+			</div>
+			<div class="col-md-8">
+				<label class="radio-inline js-separ"><input  class="form-check-input" id="separatorSpace" name="digitSep" value="&nbsp;" type="radio" checked> Space</label>
+				<label class="radio-inline js-separ"><input  class="form-check-input" id="separatorComma" name="digitSep" value="," type="radio"> Comma</label>
+				<label class="radio-inline js-separ"><input  class="form-check-input" id="separatorPoint" name="digitSep" value="." type="radio"> Point</label>
+				<label class="radio-inline js-separ"><input  class="form-check-input" id="separatorNone" name="digitSep" value="" type="radio"> None</label>
+			</div>
+		</div>
+		<div class="col-md-6 radioGroup js-digitGroup js-invisible">
+			<div class="col-md-4">
+				<label>Spacing between: </label>
+			</div>
+			<div class="col-md-8">
+				<label class="radio-inline js-grouping"><input  class="form-check-input" id="threeDigits" name="digitGroup" value="3" type="radio" checked> 3 Digits</label>
+				<label class="radio-inline js-grouping"><input  class="form-check-input" id="fourDigits" name="digitGroup" value="4" type="radio"> 4 Digits</label>
+			</div>
+		</div>
+	</div>
+	<div class="form-group row">
+		<div class="col-md-6">
+			<div class="col-md-8">
+				<label for="min">Minimum value:</label>
+			</div>
+			<div class="col-md-4">
+				<input id="min" class="form-control js-numbers" type="text" name="min" data-min="-100000000" data-max="100000000" value="10000">
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="col-md-8">
+				<label for="max">Maximum value:</label>
+			</div>
+			<div class="col-md-4">
+				<input id="max" class="form-control js-numbers" type="text" name="max" data-min="-100000000" data-max="100000000" value="1000000">
+			</div>
+		</div>
+	</div>
+	<div class="form-group row">
+		<div class="col-md-6">
+			<div class="col-md-8">
+				<label for="quantity">How many numbers do you want to be generated:</label>
+			</div>
+			<div class="col-md-4">
+				<input id="quantity" class="form-control js-numbers" type="text" name="quantity" data-min="1" data-max="1000" value="10">
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="col-md-8">
+				<label for="rate">Speaking rate:</label>
+			</div>
+			<div class="col-md-4">
+				<input id="rate" type="range" name="rate" min="1" max="2" value="1" step="0.01">
+			</div>
+		</div>
+	</div>
+	<div class="form-group row">
+		<div class="col-md-6">
+			<div class="col-md-8">
+				<label for="displayCurrent">Display numbers: </label>
+			</div>
+			<div class="col-md-4">
+				<div class="smallInput"><input  class="form-check-input" id="displayCurrent" name="displayCurrent" type="checkbox" checked></div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="col-md-8">
+				<label for="lang">Language:</label>
+			</div>
+			<div class="col-md-4">
+				<select class='js-lang' id="lang" name="lang">
+					<option value="en-US" selected>Loading</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</fieldset>
+<div class="row">
+	<div class="col-md-12">
+		<p class="js-error text-center js-invisible">Min. should be greater than max. <button class="btn btn-secondary js-switchButton" data-action="switchVals">Switch them?</button></p>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Number Trainer</title>
+		<style>
+			.current {
+				color: red;
+			}
+		</style>
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<h1>Number practice</h1>
+			<h2>Training app for language learners and interpreting students</h2>
+		</header>
+		<div class="application">
+		<section class="userInputForm js-userInput container-fluid">
+		</section>
+		<section id="js-numTrainer">
+			<div class="js-controls text-center" id="js-pageControls">
+				<button type="button" id="js-playBtn" class="js-controls js-playBtn btn btn-secondary btn-lg" data-action="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+				<button type="button" id="js-pauseBtn" class="js-controls js-pauseBtn btn btn-secondary btn-lg js-hidden" data-action="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+				<button type="button" id="js-stopBtn" class="js-controls js-stopBtn btn btn-secondary btn-lg" data-action="stop"><i class="fa fa-stop" aria-hidden="true"></i></button>
+				<button type="button" id="js-clearBtn" class="js-controls js-clearBtn btn btn-secondary btn-lg" data-action="clearSessions" disabled><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+			</div>
+			<section class="display well clearfix">
+			<div class="js-displayResult"></div>
+			<div class="js-displayError"></div>
+			</section>
+		</section>
+		</div>
+		<script src='script.js'></script>
+	</body>
+</html>
