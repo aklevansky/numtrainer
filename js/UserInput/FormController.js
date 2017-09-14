@@ -46,7 +46,7 @@ export default class FormController {
 	// necessary to check for onblur event
 	getInputElements() {
 		let inputs = {}
-		for (let input of document.querySelectorAll('.js-numbers') ) {
+		for (let input of document.querySelectorAll('.js-numbers')) {
 			inputs[input.name] = input;
 		}
 
@@ -55,7 +55,7 @@ export default class FormController {
 
 	// input - string,name of the input field
 	setInput(input, value) {
-			this._inputs.get(input).value = value;
+		this._inputs.get(input).value = value;
 	}
 
 	// returns input as a string
@@ -114,15 +114,15 @@ export default class FormController {
 	}
 
 	setSwitchError() {
-			this._errorMessage.classList.remove('js-invisible');
-			this._inputs.get('min').classList.add('js-invalid-input');
-			this._inputs.get('max').classList.add('js-invalid-input');
+		this._errorMessage.classList.remove('js-invisible');
+		this._inputs.get('min').classList.add('js-invalid-input');
+		this._inputs.get('max').classList.add('js-invalid-input');
 	}
 
 	removeSwitchError() {
-			this._errorMessage.classList.add('js-invisible');
-			this._inputs.get('min').classList.remove('js-invalid-input');
-			this._inputs.get('max').classList.remove('js-invalid-input');
+		this._errorMessage.classList.add('js-invisible');
+		this._inputs.get('min').classList.remove('js-invalid-input');
+		this._inputs.get('max').classList.remove('js-invalid-input');
 	}
 
 
@@ -133,7 +133,7 @@ export default class FormController {
 			} else {
 				select.checked = false;
 			}
-		}	
+		}
 	}
 
 	_createForm(container) {
@@ -167,6 +167,18 @@ export default class FormController {
 					availableLang.set(lang[0], lang[1]);
 				}
 			}
+			let langSelect = lodashTemplate(languageSelectTemplate)({
+				availableLang
+			});
+			let dropList = this._form.querySelector('.js-lang');
+			if (dropList) {
+				dropList.innerHTML = langSelect;
+			}
+		}, error => {
+			let supportedLang = new Map([
+				['en-US', 'English US']
+			]);
+
 			let langSelect = lodashTemplate(languageSelectTemplate)({
 				availableLang
 			});
