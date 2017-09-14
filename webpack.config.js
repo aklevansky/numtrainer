@@ -8,7 +8,7 @@ const config = {
     path: path.join(__dirname, 'public'),
     filename: "script.js"
   },
-
+   devtool: "cheap-inline-module-source-map",
   module: {
     rules: [{
       test: /\.js?$/,
@@ -62,9 +62,9 @@ const devConfig = () => {
 const productionConfig = () => {
 
   const prod = {
-    plugins: [
-      new webpack.optimize.UglifyJsPlugin()
-    ]
+    // plugins: [
+    //   new webpack.optimize.UglifyJsPlugin()
+    // ]
   }
 
   return Object.assign({}, config, prod);

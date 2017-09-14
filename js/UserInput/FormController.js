@@ -159,6 +159,7 @@ export default class FormController {
 				}
 			}
 		}).then(voices => {
+
 			let supportedLang = new Set();
 			voices.forEach(voice => supportedLang.add(voice.lang));
 			let availableLang = new Map();
@@ -174,8 +175,8 @@ export default class FormController {
 			if (dropList) {
 				dropList.innerHTML = langSelect;
 			}
-		}, error => {
-			let supportedLang = new Map([
+		}).catch(e => {
+			let availableLang = new Map([
 				['en-US', 'English US']
 			]);
 
