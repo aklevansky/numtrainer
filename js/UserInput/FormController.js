@@ -168,6 +168,7 @@ export default class FormController {
 					availableLang.set(lang[0], lang[1]);
 				}
 			}
+
 			let langSelect = lodashTemplate(languageSelectTemplate)({
 				availableLang
 			});
