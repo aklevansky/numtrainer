@@ -162,27 +162,30 @@ export default class FormController {
 
 			let supportedLang = new Set();
 			voices.forEach(voice => supportedLang.add(voice.lang));
-			let availableLang = new Map();
+			// let availableLang = new Map();
+			let arr = [];
 			for (let lang of LANG) {
 				if (supportedLang.has(lang[0])) {
-					availableLang.set(lang[0], lang[1]);
+					arr.push(lang);
+			//		availableLang.set(lang[0], lang[1]);
 				}
 			}
 
 			let langSelect = lodashTemplate(languageSelectTemplate)({
-				availableLang
+				arr
 			});
 			let dropList = this._form.querySelector('.js-lang');
 			if (dropList) {
 				dropList.innerHTML = langSelect;
 			}
 		}).catch(e => {
-			let availableLang = new Map([
-				['en-US', 'English US']
-			]);
+			// let availableLang = new Map([
+			// 	['en-US', 'English US']
+			// ]);
 
+			let arr = [['en-US', 'English US']];
 			let langSelect = lodashTemplate(languageSelectTemplate)({
-				availableLang
+				arr
 			});
 			let dropList = this._form.querySelector('.js-lang');
 			if (dropList) {

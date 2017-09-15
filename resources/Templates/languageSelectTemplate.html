@@ -1,3 +1,8 @@
-<% availableLang.forEach( (lang, abbr) => {%>
-<option value="<%-lang%>"<% if (abbr === 'en-US'){%>selected <%}%>><%-lang%></option>
+<% arr.forEach( lang => {%>
+<option value="<%-lang[0]%>"<% if (lang[0] === 'en-US'){%>selected <%}%>><%-lang[1]%></option>
 <%})%>
+
+
+<!-- <% arr.forEach( (lang, abbr) => {%>
+<option value="<%-lang%>"<% if (abbr === 'en-US'){%>selected <%}%>><%-lang%></option>
+<%})%> -->
